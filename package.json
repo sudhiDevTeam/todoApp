@@ -64,7 +64,7 @@
   },
   "scripts": {
     "start": " node scripts/start.js",
-    "build": "GENERATE_SOURCEMAP=false && export PORT=8080 && node scripts/build.js",
+    "build": "GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
