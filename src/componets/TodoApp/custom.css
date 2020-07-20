@@ -1,51 +1,53 @@
 body{
-    background-color: #056670;
+    background-color: #70054c;
     margin: 0;
 }
-.todo-Container {
 
+.todo-Container {
 width: 350px;
 text-align: center;
 margin: auto;
 margin-top: 10px;
 }
 .input-values{
-    background-color: #fff;
+    background-color: #7b5a5a;
+    box-shadow: 0 2px 22px 1px #336f0bcc;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     
 }
 .input-values input{
     border-radius: 5px;
     border: 1px solid silver;
+    background-color: #ddb5b5;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     outline-style: none;
+    
 }
 ul{
-   
     text-align: left;
     padding: 0;
 }
 ul li {
-    background-color: #fff;
+    box-shadow:0 2px 22px 1px #336f0bcc;
+    background-color: #7b5a5a;
     list-style: none;
     padding: 15px;
     border-radius: 5px;
     padding-bottom: 10px;
     margin-bottom: 10px;
     display: flex;
-}
-button{
-    width: 10px;
-    height: 20px;
-    background-color: red;
-    
+    text-align: left;
+    cursor: pointer;
+    word-break: break-all;
 }
 ul li i{
+    
     cursor: pointer;
     text-align: right;
     flex: 1;
     color: red;
+    
 }

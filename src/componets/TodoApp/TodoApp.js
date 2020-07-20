@@ -15,25 +15,26 @@ class TodoApp extends Component {
     storeItems = event => {
         event.preventDefault();
         const { input} = this.state;
-        if(this.state.flag ==="new")
+        if(input !== "")
         {
-            this.setState({
-                items: [...this.state.items, input],
-                input : "",
-                flag : "new"
-            });
-        }else{
-            const its = [...this.state.items];
-                        its.splice(this.state.id, 0, this.state.input);
-                     
-            this.setState({
-                items:its,
-                input : "",
-                flag : "new"
-            });
-        }
-       
-        
+            if(this.state.flag ==="new")
+            {
+                this.setState({
+                    items: [...this.state.items, input],
+                    input : "",
+                    flag : "new"
+                });
+            }else{
+                const its = [...this.state.items];
+                            its.splice(this.state.id, 0, this.state.input);
+                         
+                this.setState({
+                    items:its,
+                    input : "",
+                    flag : "new"
+                });
+            }
+        }  
     };
     deleteItem = key => {
         this.setState({
@@ -42,15 +43,16 @@ class TodoApp extends Component {
     }
     editData = (key,ediVal) =>{
         if(this.state.input ==="")
-        {
-            
+        {   
             this.setState({
                 flag:"update",
                 id:key,
                 input:ediVal,
                 items:this.state.items.filter((data,index)=>index !==key)
                 });
-            }
+        }else{
+
+        }
     }
 
     render() {
@@ -60,12 +62,12 @@ class TodoApp extends Component {
                 <form className="input-values" onSubmit={this.storeItems}>
                     <h1>To do App</h1>
                     <span hidden value={id}></span>
-                    <input type="text" value={input} onChange={this.handleChange} placeholder="Enter the values" id="todo"></input>
+                    <input type="text" value={input} onChange={this.handleChange} placeholder="Enter the values....." id="todo"></input>
                 </form>
                 <ul>
                     {items.map(
                         (data, index) => (
-                            <li key={index} onClick={()=> this.editData(index,data)}> {data} 
+                            <li key={index} onClick={()=> this.editData(index,data)}  > {data} 
                             <i className="fas fa-trash-alt" onClick={()=> this.deleteItem(index)}></i>
                             </li>
                         )
