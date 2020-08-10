@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import "./custom.css";
 class TodoApp extends Component {
+  // TODO chagne to userState  @sudhiDevTeam
   state = {
     input: "",
     items: [],
     flag: "new",
     id: "",
   };
-  //TODO change this code
+  // TODO this is need to complete @sudhiDevTeam
   handleChange = (event) => {
     this.setState({
       input: event.target.value,
