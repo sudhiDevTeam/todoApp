@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import "./custom.css";
 class TodoApp extends Component {
-  // TODO chagne to userState  @sudhiDevTeam
+  Closes #7 
+
   state = {
     input: "",
     items: [],
     flag: "new",
     id: "",
   };
-  // TODO this is need to complete @sudhiDevTeam
+  
   handleChange = (event) => {
     this.setState({
       input: event.target.value,
@@ -36,6 +37,7 @@ class TodoApp extends Component {
       }
     }
   };
+
   deleteItem = (key) => {
     this.setState({
       items: this.state.items.filter((data, index) => index !== key),
@@ -47,6 +49,7 @@ class TodoApp extends Component {
         flag: "update",
         id: key,
         input: ediVal,
+        // @ts-ignore
         items: this.state.items.filter((data, index) => index !== key),
       });
     } else {
