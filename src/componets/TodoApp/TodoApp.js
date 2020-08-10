@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./custom.css";
-class TodoApp extends Component {
-  Closes #7 
-
+class TodoApp extends Component 
+Fixed #7,#6,#5,#4
   state = {
     input: "",
     items: [],
