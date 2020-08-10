@@ -57,7 +57,7 @@ class TodoApp extends Component {
       <div className="todo-Container">
         <form className="input-values" onSubmit={this.storeItems}>
           <h1>To do App</h1>
-          <span hidden value ={id.toString()}></span>
+          <span hidden value={id.toString()}></span>
           <input
             type="text"
             value={input}
